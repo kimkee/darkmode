@@ -26,12 +26,12 @@
         const chkTogs  = document.querySelector('.check-dark>input');
 
         const togDark  = ()=> setDark( !htmlCls.contains('dark') );
-        const initDark = ()=> setDark( JSON.parse(localStorage.getItem("darkmode")) );
+        const initDark = ()=> setDark( JSON.parse(localStorage.getItem('darkmode')) );
         const setDark  = (isDark)=> {
             chkTogs.checked = isDark;
             htmlCls.toggle('dark', isDark);
             btnTogs.textContent = isDark ? '🌛' : '🌞';
-            localStorage.setItem("darkmode",isDark);
+            localStorage.setItem('darkmode',isDark);
         }
         document.addEventListener('DOMContentLoaded', initDark);
         darkMode.addEventListener('change', initDark);
