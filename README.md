@@ -12,15 +12,16 @@ https://kimkee.github.io/darkmode/
 ```js
 const darkMode = window.matchMedia('(prefers-color-scheme: dark)');
 const htmlCls  = document.documentElement.classList;
-const btnTogs  = document.querySelector('.btn-tog-dark');
-const chkTogs  = document.querySelector('.check-dark>input');
+const btnTogs  = document.querySelectorAll('.btn-tog-dark');
+const chkTogs  = document.querySelectorAll('.check-dark>input');
 
 const togDark  = ()=> setDark( !htmlCls.contains('dark') );
-const initDark = ()=> setDark( darkMode.matches );
+const initDark = ()=> setDark( JSON.parse(localStorage.getItem('darkmode')) );
 const setDark  = (isDark)=> {
-    chkTogs.checked = isDark;
+    chkTogs.forEach( tog => tog.checked = isDark );
+    btnTogs.forEach( btn => btn.innerHTML = isDark ? '🌛' : '🌞' );
     htmlCls.toggle('dark', isDark);
-    btnTogs.textContent = isDark ? '🌛' : '🌞';
+    localStorage.setItem('darkmode',isDark);
 }
 document.addEventListener('DOMContentLoaded', initDark);
 darkMode.addEventListener('change', initDark);
