@@ -1,0 +1,52 @@
+@charset "utf-8";
+@import url("//fonts.googleapis.com/earlyaccess/notosanskr.css");
+/* reset css */
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,
+dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, details, figcaption, figure, dialog,
+footer, header, hgroup, menu, main, nav, section{margin:0; padding:0; border:0;}
+article, aside, details, figcaption, figure, dialog,
+footer, header, hgroup, menu, main, nav, section{display:block;}
+html,body{}
+body{word-wrap:break-word; word-break:keep-all; color:#333333; line-height:1.6; -webkit-text-size-adjust:none;}
+html *{max-height:1000000px;} /* Android tablet bug fix */
+h1, h2, h3, h4, h5, h6{font-size:100%;font-weight: normal;}
+a{color:#333333; text-decoration: none;}
+a,button,input{-webkit-tap-highlight-color: rgba(0, 0, 0, 0.2);}
+body,select,input,textarea,button{font-size: 13px;font-family: 'Roboto',"Noto Sans KR","NotoSansKR","Malgun Gothic", "맑은 고딕" , Helvetica, Arial, sans-serif,"Apple Gothic","NotoSans","돋음", "Dotum";vertical-align:middle;}
+ol,ul,li{list-style:none;}
+label{vertical-align:middle; display:inline-block;}
+legend,caption{width:0;height:0; visibility:hidden; font-size:0;line-height:0;}
+img{vertical-align:middle; border:none;}
+table{border-collapse:collapse; border-spacing:0;}
+address,em,i{font-style:normal; }
+*,::before,::after{-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}
+*{outline-color: rgb(0 114 255 / 20%);}
+::-ms-clear{display: none; }
+
+.hdt{font-size:16px;font-weight: 500;margin-bottom: 20px;color: #aaaaaa;}
+
+.check-dark{display:inline-block;vertical-align:middle;position:relative;}
+.check-dark em{width: 51px;height: 28px;background: #669aff;outline:none;border-radius:26px;-webkit-appearance:none;display:block;line-height: 1;position: relative;z-index: 8;font-style: normal;}
+.check-dark input[type=checkbox] {width: 48px;height: 28px;padding:0px;position:absolute;z-index:10;margin: 0;opacity: 0;}
+.check-dark input+em::after{content: "🌞";position:absolute;left: 26px;top: 4px;font-size: 17px;color:#ffffff;line-height: 1;z-index: 5;/* transition: all 0.4s; */}
+.check-dark input+em::before{position:absolute;left: 3px;top: 3px;width: 22px;height: 22px;background:#ffffff;border-radius:30px;/* transition:all 0.2s; */content:"";z-index: 10;}
+.check-dark input:checked+em{background: #8d8d8d;}
+.check-dark input:checked+em::after{content: "🌜";left: 3px;}
+.check-dark input:checked+em::before{left: 25px;background: #e7e7e7;}
+.check-dark input:disabled+em{background-color: #dddddd;}
+.check-dark input:disabled+em:before{background-color:#f5f5f5;}
+
+.btn-tog-dark{ position: absolute; right: 10px; top: 10px; background: no-repeat; border: none; font-size: 30px; }
+
+body{background-color: #ffffff;transition: background-color 0.4s;display: flex;flex-direction: column;align-items: center;justify-content: center;height: 100dvh;}
+.txt{color: #222222;}
+
+.dark body{background-color: #1a1a1a;}
+.dark .txt{color: #dddddd;}
+
+@media (prefers-color-scheme: light) {
+}
+@media (prefers-color-scheme: dark) {
+}

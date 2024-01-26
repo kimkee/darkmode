@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>DarkMode</title>
+    <meta charset="utf-8">
+    <link href="//kimkee.github.io/ui/static/img/common/favicon.ico" rel="shrtcut icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, shrink-to-fit=no, viewport-fit=cover">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="body" style="padding: 20px;">
+    
+    <h3 class="hdt">DarkMode</h3>
+
+    <button type="button" class="btn-tog-dark" onclick="togDark()"></button>
+    <span class="check-dark"><input type="checkbox" onchange="togDark()"><em></em></span>
+
+    <script>
+        const darkMode = window.matchMedia('(prefers-color-scheme: dark)');
+        const htmlCls  = document.documentElement.classList;
+        const btnTogs  = document.querySelector('.btn-tog-dark');
+        const chkTogs  = document.querySelector('.check-dark>input');
+
+        const togDark  = ()=> setDark( !htmlCls.contains('dark') );
+        const initDark = ()=> setDark( darkMode.matches );
+        const setDark  = (isDark)=> {
+            chkTogs.checked = isDark;
+            htmlCls.toggle('dark', isDark);
+            btnTogs.textContent = isDark ? '🌛' : '🌞';
+        }
+        document.addEventListener('DOMContentLoaded', initDark);
+        darkMode.addEventListener('change', initDark);
+    </script>
+</body>
+
+</html>
