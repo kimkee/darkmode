@@ -25,7 +25,9 @@ address,em,i{font-style:normal; }
 *{outline-color: rgb(0 114 255 / 20%);}
 ::-ms-clear{display: none; }
 
-.hdt{font-size:16px;font-weight: 500;margin-bottom: 20px;color: #aaaaaa;}
+.btn-tog-dark:lang(dark){}
+
+.hdt{font-size:16px;font-weight: 500;margin-top: 20px;color: #aaaaaa;}
 
 .check-dark{display:inline-block;vertical-align:middle;position:relative;}
 .check-dark em{width: 52px;height: 28px;background: #669aff;outline:none;border-radius:26px;-webkit-appearance:none;display:block;line-height: 1;position: relative;z-index: 8;font-style: normal;box-shadow: 1px 1px 1px rgb(0 0 0 / 19%);}
