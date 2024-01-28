@@ -2,6 +2,11 @@
 
 https://kimkee.github.io/darkmode/
 
+ <video width="320" height="450" controls>
+        <source src="https://kimkee.github.io/darkmode/darkmode.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
 ````html
 <span class="check-dark">
     <input type="checkbox" onchange="togDark()">
