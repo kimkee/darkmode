@@ -4,10 +4,7 @@ https://kimkee.github.io/darkmode/
 
 ![다크 모드 예시](https://kimkee.github.io/darkmode/darkmode.mp4)
 
- <video width="320" height="450" controls>
-        <source src="https://kimkee.github.io/darkmode/darkmode.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
+ <img src="https://kimkee.github.io/darkmode/darkmode.gif">
 
 ````html
 <span class="check-dark">
