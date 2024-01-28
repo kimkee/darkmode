@@ -2,9 +2,7 @@
 
 https://kimkee.github.io/darkmode/
 
-![다크 모드 예시](https://kimkee.github.io/darkmode/darkmode.mp4)
-
- <img src="https://kimkee.github.io/darkmode/darkmode.gif">
+ <img src="https://kimkee.github.io/darkmode/darkmode.gif" alt="다크 모드 예시">
 
 ````html
 <span class="check-dark">
