@@ -25,14 +25,13 @@ address,em,i{font-style:normal; }
 *{outline-color: rgb(0 114 255 / 20%);}
 ::-ms-clear{display: none; }
 
-.btn-tog-dark:lang(dark){}
+
 
 .hdt{font-size: 8px;font-weight: 500;margin: 10px;color: #aaaaaa;}
-
 .check-dark{display:inline-block;vertical-align:middle;position:relative;}
 .check-dark em{width: 54px;height: 32px;background: #669aff;outline:none;border-radius:26px;-webkit-appearance:none;display:block;line-height: 1;position: relative;z-index: 8;font-style: normal;box-shadow: 1px 1px 1px rgb(0 0 0 / 19%);}
-.check-dark input[type=checkbox] {width: 52px;height: 28px;padding:0px;position:absolute;z-index:10;margin: 0;opacity: 0;}
-.check-dark input+em::after{content: "🌞";position:absolute;left: 28px;top: 6px;font-size: 17px;color:#ffffff;line-height: 1;z-index: 5;transition: all 0.4s;}
+.check-dark input[type=checkbox] {width: 54px;height: 32px;padding:0px;position:absolute;z-index:10;margin: 0;opacity: 0;}
+.check-dark input+em::after{content: "🌞";position:absolute;left: 29px;top: 6px;font-size: 17px;color:#ffffff;line-height: 1;z-index: 5;transition: all 0.4s;}
 .check-dark input+em::before{position:absolute;left: 4px;top: 4px;width: 24px;height: 24px;background:#ffffff;border-radius:30px;transition:all 0.2s;content:"";z-index: 10;box-shadow: inset 1px 1px 1px rgb(0 0 0 / 19%);}
 .check-dark input:checked+em{background: #666666;box-shadow: 1px 1px 1px rgb(0 0 0 / 60%);}
 .check-dark input:checked+em::after{content: "🌜";left: 5px;}
@@ -51,9 +50,6 @@ address,em,i{font-style:normal; }
 .check-dark.type2 input:disabled+em{background-color: #dddddd;}
 .check-dark.type2 input:disabled+em:before{background-color:#f5f5f5;}
 
-
-
-.btn-tog-dark{position: absolute;right: 10px;top: 10px;background: no-repeat;border: none;font-size: 30px;padding: 0;}
 
 body{padding: 20px;transition: background-color 0.2s;display: flex;flex-direction: column;align-items: center;justify-content: center;height: 100dvh;}
 .txt{color: #222222;}

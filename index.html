@@ -10,36 +10,36 @@
 </head>
 <style>
     .big{transform: scale(2); display: flex; flex-direction: column; align-items: center;}
-    .top{position: absolute;left: 20px;top: 20px;display: flex;grid-gap: 10px;}
+    .top{position: absolute;top: 20px;}
+    .top.left{left: 20px;}
+    .top.right{right: 20px;}
 </style>
 <body class="body">
-
-    <button type="button" class="btn-tog-dark" onclick="togDark()"></button>
     
+    <div class="top left">
+        <span class="check-dark"><input type="checkbox" onchange="togDark()"><em></em></span>
+    </div>
+
+    <div class="top right">
+        <span class="check-dark type2"><input type="checkbox" onchange="togDark()"><em></em></span>
+    </div>
+
     <div class="big">
         <span class="check-dark"><input type="checkbox" onchange="togDark()"><em></em></span>
         <h3 class="hdt">DARKMODE</h3>
-        <span class="check-dark type2"><input type="checkbox" onchange="togDark()"><em></em></span>
-    </div>
-    
-
-    <div class="top">
-        <span class="check-dark"><input type="checkbox" onchange="togDark()"><em></em></span>
         <span class="check-dark type2"><input type="checkbox" onchange="togDark()"><em></em></span>
     </div>
 
     <script>
         const darkMode = window.matchMedia('(prefers-color-scheme: dark)');
         const htmlCls  = document.documentElement.classList;
-        const btnTogs  = document.querySelectorAll('.btn-tog-dark');
         const chkTogs  = document.querySelectorAll('.check-dark>input');
         const locDark  = JSON.parse(localStorage.getItem('darkmode'));
 
-        const togDark  = ()=> setDark( !htmlCls.contains('dark') );
         const initDark = ()=> locDark === null ? setDark( darkMode.matches ) : setDark( locDark ) ;
+        const togDark  = ()=> setDark( !htmlCls.contains('dark') );
         const setDark  = (isDark)=> {
             chkTogs.forEach( tog => tog.checked = isDark );
-            btnTogs.forEach( btn => btn.innerHTML = isDark ? '🌛' : '🌞' );
             htmlCls.toggle('dark', isDark);
             localStorage.setItem('darkmode',isDark);
         }
