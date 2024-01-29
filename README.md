@@ -2,6 +2,8 @@
 
 https://kimkee.github.io/darkmode/
 
+ <img src="https://kimkee.github.io/darkmode/darkmode.gif" alt="다크 모드 예시">
+
 ````html
 <span class="check-dark">
     <input type="checkbox" onchange="togDark()">
