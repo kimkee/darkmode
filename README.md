@@ -5,11 +5,24 @@ https://kimkee.github.io/darkmode/
  <img src="https://kimkee.github.io/darkmode/darkmode.gif" alt="다크 모드 예시">
 
 ````html
-<span class="check-dark">
-    <input type="checkbox" onchange="togDark()">
-    <em></em>
-    <b><i class="d fa-solid fa-moon"></i><i class="l fa-solid fa-sun"></i></b>
-</span>
+<body>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./darkmode.css">
+
+    <span data-ui="dark" class="check-dark">
+        <input type="checkbox">
+        <em></em>
+        <b><i class="d fa-solid fa-moon"></i><i class="l fa-solid fa-sun"></i></b>
+    </span>
+
+    <span data-ui="dark" class="check-dark2">
+        <input type="checkbox">
+        <em></em>
+        <b><i class="d fa-solid fa-moon"></i><i class="l fa-solid fa-sun"></i></b>
+    </span>
+
+    <script src="./darkmode.js"></script>
+</body>
 ````
 
 ```js
@@ -27,4 +40,5 @@ const setDark  = (isDark)=> {
 }
 document.addEventListener('DOMContentLoaded', initDark);
 darkMode.addEventListener('change', initDark);
+chkTogs.forEach( checkbox => checkbox.addEventListener('change', togDark) );
 ```
