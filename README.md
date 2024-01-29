@@ -6,6 +6,7 @@ https://kimkee.github.io/darkmode/
 <span class="check-dark">
     <input type="checkbox" onchange="togDark()">
     <em></em>
+    <b><i class="d fa-solid fa-moon"></i><i class="l fa-solid fa-sun"></i></b>
 </span>
 ````
 
