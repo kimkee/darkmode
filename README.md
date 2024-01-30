@@ -2,7 +2,6 @@
 
 https://kimkee.github.io/darkmode/
 
- <img src="https://kimkee.github.io/darkmode/darkmode.gif" alt="다크 모드 예시">
 
 ````html
 <body>
@@ -42,3 +41,5 @@ document.addEventListener('DOMContentLoaded', initDark);
 darkMode.addEventListener('change', initDark);
 chkTogs.forEach( checkbox => checkbox.addEventListener('change', togDark) );
 ```
+
+ <img src="https://kimkee.github.io/darkmode/darkmode.gif" alt="다크 모드 예시">
