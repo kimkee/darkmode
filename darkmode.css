@@ -25,3 +25,5 @@
 .check-dark2 input:checked+em{background: #666666;box-shadow: 1px 1px 1px rgb(0 0 0 / 60%);}
 .check-dark2 input:checked~ b{clip-path: circle(12px at 12px 12px);left: 4px;top: 4px;color: #ffb900;}
 .check-dark2 input:checked+em::before{background: #333333;box-shadow: inset 1px 1px 0px 0px rgb(0 0 0 / 30%);}
+
+
