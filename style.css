@@ -12,7 +12,6 @@ html,body{}
 body{word-wrap:break-word; word-break:keep-all; color:#333333; line-height:1.6; -webkit-text-size-adjust:none;}
 html *{max-height:1000000px;} /* Android tablet bug fix */
 h1, h2, h3, h4, h5, h6{font-size:100%;font-weight: normal;}
-a{color: #666666;}
 a,button,input{-webkit-tap-highlight-color: rgba(0, 0, 0, 0.2);}
 body,select,input,textarea,button{font-size: 13px;font-family: 'Roboto',"Noto Sans KR","NotoSansKR","Malgun Gothic", "맑은 고딕" , Helvetica, Arial, sans-serif,"Apple Gothic","NotoSans","돋음", "Dotum";vertical-align:middle;}
 ol,ul,li{list-style:none;}
@@ -25,19 +24,19 @@ address,em,i{font-style:normal; }
 *{outline-color: rgb(0 114 255 / 20%);}
 ::-ms-clear{display: none; }
 
-
-
-.hdt{font-size: 8px;font-weight: 500;margin: 10px;color: #666666;}
-
-
-
-body{padding: 20px;transition: background-color 0.2s;display: flex;flex-direction: column;align-items: center;justify-content: center;height: 100dvh;}
-.txt{color: #222222;}
-
-.dark body{background-color: #1a1a1a;}
-.dark .txt{color: #dddddd;}
-.dark  a{color: #797979;}
-@media (prefers-color-scheme: light) {
+:root{
+    --body-bg: #ffffff;
+    --color-1: #555555;
+    --color-link: #666666;
 }
-@media (prefers-color-scheme: dark) {
+
+html.dark{
+    --body-bg:#1a1a1a;
+    --color-1: #888888;
+    --color-link: #797979;
 }
+
+a{color: var(--color-link);}
+.hdt{font-size: 8px;font-weight: 500;margin: 10px;color: var(--color-1);}
+body{background-color: var(--body-bg); padding: 20px;transition: background-color 0.2s;display: flex;flex-direction: column;align-items: center;justify-content: center;height: 100dvh;}
+
